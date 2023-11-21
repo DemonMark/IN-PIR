@@ -1,0 +1,101 @@
+   1               		.file	"timeout.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	delay_ms
+  18               	delay_ms:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LBB12:
+  25               	.LBB13:
+  26               	.LBB14:
+  27               	.LBB15:
+  28               	.LM2:
+  29 0000 20E0      		ldi r18,lo8(3840)
+  30 0002 3FE0      		ldi r19,hi8(3840)
+  31 0004 00C0      		rjmp .L2
+  32               	.LVL1:
+  33               	.L3:
+  34 0006 F901      		movw r30,r18
+  35               	/* #APP */
+  36               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  37 0008 3197      		1: sbiw r30,1
+  38 000a 01F4      		brne 1b
+  39               	 ;  0 "" 2
+  40               	/* #NOAPP */
+  41               	.LBE15:
+  42               	.LBE14:
+  43               	.LBE13:
+  44               	.LBE12:
+  45               	.LM3:
+  46 000c 0197      		sbiw r24,1
+  47               	.L2:
+  48               	.LM4:
+  49 000e 0097      		sbiw r24,0
+  50 0010 01F4      		brne .L3
+  51               	/* epilogue start */
+  52               	.LM5:
+  53 0012 0895      		ret
+  54               	.LFE6:
+  56               	.global	wd_init
+  58               	wd_init:
+  59               	.LFB7:
+  60               	.LM6:
+  61               	/* prologue: function */
+  62               	/* frame size = 0 */
+  63               	.LM7:
+  64 0014 2FE0      		ldi r18,lo8(15)
+  65 0016 88E1      		ldi r24,lo8(24)
+  66 0018 90E0      		ldi r25,hi8(24)
+  67               	/* #APP */
+  68               	 ;  34 "timeout.c" 1
+  69 001a 0FB6      		in __tmp_reg__,__SREG__
+  70 001c F894      		cli
+  71 001e A895      		wdr
+  72 0020 8093 6000 		sts 96,r24
+  73 0024 0FBE      		out __SREG__,__tmp_reg__
+  74 0026 2093 6000 		sts 96,r18
+  75               		
+  76               	 ;  0 "" 2
+  77               	/* epilogue start */
+  78               	.LM8:
+  79               	/* #NOAPP */
+  80 002a 0895      		ret
+  81               	.LFE7:
+  83               	.global	wd_kick
+  85               	wd_kick:
+  86               	.LFB8:
+  87               	.LM9:
+  88               	/* prologue: function */
+  89               	/* frame size = 0 */
+  90               	.LM10:
+  91               	/* #APP */
+  92               	 ;  39 "timeout.c" 1
+  93 002c A895      		wdr
+  94               	 ;  0 "" 2
+  95               	/* epilogue start */
+  96               	.LM11:
+  97               	/* #NOAPP */
+  98 002e 0895      		ret
+  99               	.LFE8:
+ 141               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 timeout.c
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:2      *ABS*:0000003f __SREG__
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:3      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:4      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:5      *ABS*:00000034 __CCP__
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:7      *ABS*:00000001 __zero_reg__
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:18     .text:00000000 delay_ms
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:58     .text:00000014 wd_init
+C:\DOCUME~1\AZON~1.IMK\USTAWI~1\Temp/ccozzAUo.s:85     .text:0000002c wd_kick
+
+NO UNDEFINED SYMBOLS

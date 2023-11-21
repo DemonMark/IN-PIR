@@ -1,0 +1,65 @@
+GAS LISTING C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s 			page 1
+
+
+   1               		.file	"dogm.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.section	.debug_abbrev,"",@progbits
+   9               	.Ldebug_abbrev0:
+  10               		.section	.debug_info,"",@progbits
+  11               	.Ldebug_info0:
+  12               		.section	.debug_line,"",@progbits
+  13               	.Ldebug_line0:
+  14               		.text
+  15               	.Ltext0:
+  16               	.Letext0:
+  17               		.section	.debug_abbrev
+  18 0000 00        		.byte	0x0
+  19               		.section	.debug_line
+  20 0000 2000 0000 		.long	.LELT0-.LSLT0
+  21               	.LSLT0:
+  22 0004 0200      		.word	0x2
+  23 0006 1000 0000 		.long	.LELTP0-.LASLTP0
+  24               	.LASLTP0:
+  25 000a 01        		.byte	0x1
+  26 000b 01        		.byte	0x1
+  27 000c F6        		.byte	0xf6
+  28 000d F5        		.byte	0xf5
+  29 000e 0A        		.byte	0xa
+  30 000f 00        		.byte	0x0
+  31 0010 01        		.byte	0x1
+  32 0011 01        		.byte	0x1
+  33 0012 01        		.byte	0x1
+  34 0013 01        		.byte	0x1
+  35 0014 00        		.byte	0x0
+  36 0015 00        		.byte	0x0
+  37 0016 00        		.byte	0x0
+  38 0017 01        		.byte	0x1
+  39 0018 00        		.byte	0x0
+  40 0019 00        		.byte	0x0
+  41               	.LELTP0:
+  42 001a 00        		.byte	0x0
+  43 001b 05        		.uleb128 0x5
+  44 001c 02        		.byte	0x2
+  45 001d 0000 0000 		.long	.Letext0
+  46 0021 00        		.byte	0x0
+  47 0022 01        		.uleb128 0x1
+  48 0023 01        		.byte	0x1
+  49               	.LELT0:
+GAS LISTING C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 dogm.c
+C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s:2      *ABS*:0000003f __SREG__
+C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s:3      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s:4      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s:5      *ABS*:00000034 __CCP__
+C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\KZaleski\USTAWI~1\Temp/ccHv4FeQ.s:7      *ABS*:00000001 __zero_reg__
+
+NO UNDEFINED SYMBOLS
